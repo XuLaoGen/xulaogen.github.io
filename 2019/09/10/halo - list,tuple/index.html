@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta name="author" content="徐源"><meta name="desciption" content="this is xu yuan's blog"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Peace &amp; Love</title><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" type="text/css" href="/css/carbon.css"><script defer="defer" src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script><script defer="defer" src="//cdn.jsdelivr.net/jquery.pjax/1.9.5/jquery.pjax.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.css" type="text/css" media="screen"><script defer="defer" type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>var performFancybox = true;</script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/katex/0.5.0/katex.min.css"><script async="async" type="text/javascript" src="//cdn.jsdelivr.net/katex/0.5.0/katex.min.js"></script><script async="async" type="text/javascript" src="//cdn.jsdelivr.net/katex/0.5.0/contrib/auto-render.min.js"></script><script>var doRenderMath = 'katex';</script><script defer="defer" src="/js/carbon.js"></script></head><body><div id="container"><div id="banner"><h1 id="site-title"><a href="/">Peace &amp; Love</a></h1><p id="site-subtitle">XuYuan is a lucky boy</p></div><div id="content"><div class="meta"><h2 class="article-title"><a href="/2019/09/10/halo - list,tuple">无题</a></h2><div class="article-date"><a href="javascript:void(0);" class="extra-switch">2019-09-10</a></div></div><div class="extra"><span class="Tags">Tags: 无.</span></div><div class="extra"><span class="Categories">Categories: 无.</span></div><div class="article-content"><div class="gallery"></div><p>title: Halo - List,Tuple</p>
+<p><strong>1、列表基本操作</strong></p>
+<ol>
+<li>列表赋值　</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [1,2,3,4,5,6,7,8]</span><br><span class="line">a[0] = 100                                #the result ： [100, 2, 3, 4, 5, 6, 7, 8]</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>元素删除</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [1,2,3,4,5,6,7,8]</span><br><span class="line">del a[0]　　                               #the result ： [2, 3, 4, 5, 6, 7, 8]</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>分片赋值</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = [1,2,3,4,5,6,7,8]</span><br><span class="line">a[::2]                                   # [1, 3, 5, 7]</span><br><span class="line">a[-2:]                                   # [7, 8]</span><br><span class="line">a[1:1] = [0,0,0]                         # the result : [1, 0, 0, 0, 2, 3, 4, 5, 6, 7, 8]</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>使用 for i in range(10,-1,-1) 生成列表</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for i in range(10,-1,-1): # 开始位置（10），结束位置（-1）， 步长（-1）</span><br><span class="line">    print i,</span><br><span class="line"></span><br><span class="line"># 打印结果：10 9 8 7 6 5 4 3 2 1 0</span><br><span class="line"># 从10开始，每次向后取一个值，直到遇到结束位置 -1</span><br></pre></td></tr></table></figure>
+
+<p><strong>2、列表方法</strong></p>
+<ol>
+<li><p>append</p>
+<p>　　<strong>作用</strong>：append用于在列表末尾追加新的对象</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [1,2,3]</span><br><span class="line">a.append(4)                    　　　　　　　#the result ： [1, 2, 3, 4]</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>count</li>
+</ol>
+<p>　　<strong>作用：</strong>count方法统计某个元素在列表中出现的次数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [&apos;aa&apos;,&apos;bb&apos;,&apos;cc&apos;,&apos;aa&apos;,&apos;aa&apos;]</span><br><span class="line">print(a.count(&apos;aa&apos;))                                    #the result ： 3</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>extend</li>
+</ol>
+<p>　　<strong>作用：</strong>extend方法可以在列表的末尾一次性追加另一个序列中的多个值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = [1,2,3]</span><br><span class="line">b = [4,5,6]</span><br><span class="line">a.extend(b)                    #the result ：[1, 2, 3, 4, 5, 6]</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>index</li>
+</ol>
+<p>　　<strong>作用：</strong>index函数用于从列表中找出某个值第一个匹配项的索引位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [1,2,3,1]</span><br><span class="line">print(a.index(1))                                    #the result ： 0</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>insert</li>
+</ol>
+<p>　　<strong>作用：</strong> insert方法用于将对象插入到列表中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [1,2,3]</span><br><span class="line">a.insert(0,&apos;aa&apos;)            #the result : [&apos;aa&apos;, 1, 2, 3]</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>pop</li>
+</ol>
+<p>　　<strong>作用：</strong>pop方法会移除列表中的一个元素（默认是最后一个），并且返回该元素的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = [1,2,3]</span><br><span class="line">a.pop()                                                 #the result ： [1, 2]</span><br><span class="line">a.pop(0)</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>remove</li>
+</ol>
+<p>　　<strong>作用：</strong>remove方法用于移除列表中某个值的第一个匹配项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [&apos;aa&apos;,&apos;bb&apos;,&apos;cc&apos;,&apos;aa&apos;]</span><br><span class="line">a.remove(&apos;aa&apos;)                       #the result ： [&apos;bb&apos;, &apos;cc&apos;, &apos;aa&apos;]</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li>reverse</li>
+</ol>
+<p>　　<strong>作用</strong>：reverse方法将列表中的元素反向存放</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]</span><br><span class="line">a.reverse()                  #the result ： [&apos;c&apos;, &apos;b&apos;, &apos;a&apos;]</span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li>sort</li>
+</ol>
+<p>　　<strong>作用：</strong>sort方法用于在原位置对列表进行排序，意味着改变原来的列表，让其中的元素按一定顺序排列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,1,2,3]</span><br><span class="line">a.sort()                        #the result ：[1, 2, 3, &apos;a&apos;, &apos;b&apos;, &apos;c&apos;]</span><br></pre></td></tr></table></figure>
+
+<ol start="10">
+<li>enumrate</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">li = [11,22,33]</span><br><span class="line">for k,v in enumerate(li, 1):</span><br><span class="line">    print(k,v)</span><br></pre></td></tr></table></figure>
+
+<ol start="11">
+<li>range和xrange        指定范围，生成指定的数字</li>
+</ol>
+<p>　　注：python3中的range类似python2中的xrange，比如a = range(1,4) : a返回的不是列表对象而是一个可迭代对象（&lt;class ‘range’&gt;）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#1、range根据start与stop指定的范围以及step设定的步长，生成一个序列：range([start,] stop[, step])</span><br><span class="line">#2、xrange 用法与 range 完全相同，所不同的是生成的不是一个list对象，而是一个生成器</span><br><span class="line">for i in range(1,10,2):</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
+
+<ol start="12">
+<li>列表去空</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">法1：</span><br><span class="line">filter(None, your_list)</span><br><span class="line"></span><br><span class="line">法2：</span><br><span class="line">while &apos;&apos; in your_list:</span><br><span class="line">    your_list.remove(&apos;&apos;)</span><br><span class="line"></span><br><span class="line">法3：</span><br><span class="line">your_list = [x for x in your_list if x != &apos;&apos;]</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、元组</strong></p>
+<p>　　<strong>元组定义：</strong>元组和列表一样，也是一种序列，唯一的不同是元组不能修改。</p>
+<ol>
+<li>创建元组举例</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#1. 创建元组</span><br><span class="line">a = (1,2,3,4,5,6)</span><br><span class="line">#2. 将列表转换成元组</span><br><span class="line">tuple([1,2,3,4])                                    #the result ： (1, 2, 3, 4)</span><br></pre></td></tr></table></figure>
+
+<p><strong>4、列表和元组常用函数</strong></p>
+<p>　　com(x,y)                                                                                                  比较两个值</p>
+<p>　　len(seq)                                                                                                    返回序列的长度</p>
+<p>　　list(seq)                                                                                                    把序列转换成列表</p>
+<p>　　max(args)                                                                                                         返回序列或者参数集合中得最大值</p>
+<p>　　min(args)                                                                                                 返回序列或者参数集合中的最小值</p>
+<p>　　reversed(seq)                                                                                         对序列进行反向迭代</p>
+<p>　　sorted(seq)                                                                                             返回已经排列的包含seq 所有元素的列表</p>
+<p>　　tuple(seq)                                                                                                把序列转换成元组</p>
+</div><nav class="pagination"><a id="left-navigator" href="/2019/09/10/Halo - Set/">无题</a><a id="right-navigator" href="/2019/08/26/讲课笔记/">无题</a></nav></div><nav id="footer"><ul id="footer-links"><li><a href="https://github.com/XuLaoGen" class="zn">关于</a></li><li><a href="/archives" class="zn">所有文章</a></li><li><a href="https://gitee.com/DerrickWilliams" class="zn">RSS</a></li><li><a href="http://www.laoxu1.com/Vitae/" class="zn out-site">我的简历</a></li></ul></nav></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>

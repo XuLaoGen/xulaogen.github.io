@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta name="author" content="徐源"><meta name="desciption" content="this is xu yuan's blog"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Peace &amp; Love</title><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" type="text/css" href="/css/carbon.css"><script defer="defer" src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script><script defer="defer" src="//cdn.jsdelivr.net/jquery.pjax/1.9.5/jquery.pjax.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.css" type="text/css" media="screen"><script defer="defer" type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>var performFancybox = true;</script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/katex/0.5.0/katex.min.css"><script async="async" type="text/javascript" src="//cdn.jsdelivr.net/katex/0.5.0/katex.min.js"></script><script async="async" type="text/javascript" src="//cdn.jsdelivr.net/katex/0.5.0/contrib/auto-render.min.js"></script><script>var doRenderMath = 'katex';</script><script defer="defer" src="/js/carbon.js"></script></head><body><div id="container"><div id="banner"><h1 id="site-title"><a href="/">Peace &amp; Love</a></h1><p id="site-subtitle">XuYuan is a lucky boy</p></div><div id="content"><div class="meta"><h2 class="article-title"><a href="/2019/09/10/Halo - Str">无题</a></h2><div class="article-date"><a href="javascript:void(0);" class="extra-switch">2019-09-10</a></div></div><div class="extra"><span class="Tags">Tags: 无.</span></div><div class="extra"><span class="Categories">Categories: 无.</span></div><div class="article-content"><div class="gallery"></div><p>title: Halo - Str</p>
+<p><strong>1、字符串格式化</strong></p>
+<ol>
+<li>使用百分号（%）字符串格式化</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">num = 100</span><br><span class="line">print(&quot;%d to hex is %x&quot; %(num, num))        #100 to hex is 64</span><br><span class="line">print(&quot;%d to hex is %#x&quot; %(num, num))       #100 to hex is 0x64</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>使用format字符串格式化</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#1. 位置参数</span><br><span class="line">print(&quot;&#123;0&#125; is &#123;1&#125; years old&quot;.format(&quot;tom&quot;, 28))           #tom is 28 years old</span><br><span class="line">print(&quot;&#123;&#125; is &#123;&#125; years old&quot;.format(&quot;tom&quot;, 28))             #tom is 28 years old</span><br><span class="line">print(&quot;Hi, &#123;0&#125;! &#123;0&#125; is &#123;1&#125; years old&quot;.format(&quot;tom&quot;, 28)) #Hi, tom! tom is 28 years old</span><br><span class="line"></span><br><span class="line">#2. 关键字参数</span><br><span class="line">print(&quot;&#123;name&#125; is &#123;age&#125; years old&quot;.format(name = &quot;tom&quot;, age = 28))    #tom is 28 years old</span><br><span class="line"></span><br><span class="line">#3. 下标参数</span><br><span class="line">li = [&quot;tom&quot;, 28]</span><br><span class="line">print(&quot;&#123;0[0]&#125; is &#123;0[1]&#125; years old&quot;.format(li))          #tom is 28 years old</span><br></pre></td></tr></table></figure>
+
+<p> <strong>2、字符串方法</strong></p>
+<ol>
+<li>find方法</li>
+</ol>
+<p>　　<strong>作用：</strong>find方法可以在一个较长的字符串中查找子串，他返回子串所在位置的最左端索引，如果没有找到则返回-1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = &apos;abcdefghijk&apos;</span><br><span class="line">print(a.find(&apos;abc&apos;))                           #the result ： 0</span><br><span class="line">print(a.find(&apos;abc&apos;,10,100))                    #the result ： 11  指定查找的起始和结束查找位置</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>join方法</li>
+</ol>
+<p>　　<strong>作用：</strong>join方法是非常重要的字符串方法，他是split方法的逆方法，用来连接序列中的元素，并且需要被连接的元素都必须是字符串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;]</span><br><span class="line">print(&apos;+&apos;.join(a))                                    #the result ： 1+2+3</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>split方法</li>
+</ol>
+<p>　　<strong>作用：</strong>这是一个非常重要的字符串，它是join的逆方法，用来将字符串分割成序列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&apos;1+2+3+4&apos;.split(&apos;+&apos;))                            #the result ： [&apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;]</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>strip</li>
+</ol>
+<p>　　<strong>作用：</strong>strip 方法返回去除首位空格（不包括内部）的字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;   test   test    &quot;.strip())                #the result ：“test   test”</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>replace</li>
+</ol>
+<p>　　<strong>作用：</strong>replace方法返回某字符串所有匹配项均被替换之后得到字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;This is a test&quot;.replace(&apos;is&apos;,&apos;is_test&apos;))     #the result ： This_test is_test a test</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>Pinyin 模块，将汉字转换成拼音</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#! /usr/bin/env python</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">from xpinyin import Pinyin</span><br><span class="line"></span><br><span class="line">while True:</span><br><span class="line">    p = Pinyin()</span><br><span class="line">    fullname = raw_input(&apos;name：&apos;).strip()</span><br><span class="line">    fullname = fullname.decode(&apos;utf8&apos;)</span><br><span class="line">    print fullname</span><br><span class="line">    xin = fullname[0]</span><br><span class="line">    ming = fullname[1:]</span><br><span class="line">    name = ming + &apos;.&apos; + xin</span><br><span class="line">    username = p.get_pinyin(name, &apos;&apos;)</span><br><span class="line">    print username</span><br><span class="line">    print username + &apos;@yiducloud.cn&apos;</span><br></pre></td></tr></table></figure>
+
+</div><nav class="pagination"><a id="left-navigator" href="/2019/09/10/Halo - Dict/">无题</a><a id="right-navigator" href="/2019/09/10/Halo - Set/">无题</a></nav></div><nav id="footer"><ul id="footer-links"><li><a href="https://github.com/XuLaoGen" class="zn">关于</a></li><li><a href="/archives" class="zn">所有文章</a></li><li><a href="https://gitee.com/DerrickWilliams" class="zn">RSS</a></li><li><a href="http://www.laoxu1.com/Vitae/" class="zn out-site">我的简历</a></li></ul></nav></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
